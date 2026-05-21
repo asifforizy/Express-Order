@@ -1,12 +1,14 @@
 
 
 import { Pool } from "pg";
-import config from "../config";
+import dotenv from "dotenv";
+import path from 'path';
+import { config } from "../config";
 
 
 
 export const pool = new Pool({
-    connectionString: "postgresql://neondb_owner:npg_95gWixVqXvmd@ep-bitter-boat-aomldaj8-pooler.c-2.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require",
+    connectionString: config.databaseUrl,
     ssl: {
         rejectUnauthorized: false
     }

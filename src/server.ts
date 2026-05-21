@@ -1,9 +1,10 @@
 import app from "./app";
-import config from "./config";
+import { config } from "./config";
+
 import { initDB } from "./DB";
 
 const main = async () => {
-    initDB()
+    await initDB();
     app.listen(config.port, () => {
 
         
