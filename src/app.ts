@@ -8,5 +8,4 @@ app.get("/", (req : Request, res : Response) => {
 
 
 
-// export app to be used in server.ts
 export default app;
